@@ -19,6 +19,7 @@ class Doc < Thor
     
     # get all the files to process
     files = Dir.glob("#{path}/**/lib/**/*.rb")
+    files = files.select{|f| f unless (f.include?("generators/templates") || f.include?("/spec/"))}
     # without forgetting the readme file
     files += ["#{path}/README"] if File.exists?("#{path}/README")
 
