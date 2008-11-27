@@ -1,4 +1,5 @@
 require 'rubygems'
+gem 'rdoc'
 require 'rdoc/rdoc'
 require 'fileutils'
 require 'erb'
